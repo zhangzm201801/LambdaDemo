@@ -13,6 +13,9 @@ public class SitterLambda {
 		
 		System.out.println("------------------");
 		Cook.makeFood("白菜");
+
+		//通过方法引用来代替Lambda表达式
+		hireSitter(Cook::makeFood);
 	}
 	
 	public static  void hireSitter(Sitter sitter) {
