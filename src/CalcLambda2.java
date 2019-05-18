@@ -18,7 +18,13 @@
  */
 public class CalcLambda2 {
 	public static void main(String[] args) {
+		//1:调用方法的时候，参数类型是函数式接口，所以Lambda可以推断出是哪个函数式接口
 		method((int a ,int b)-> {return a + b ;});
+		 
+		//2:也可以根据赋值语句左侧的类型来进行Lambda上下文推断
+		System.out.println("-----------------------------");
+		Calc param = (int a ,int b)-> {return a + b ;};
+		method(param);
 	}
 	
 	private static void method(Calc calc) {
